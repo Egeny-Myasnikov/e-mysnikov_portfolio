@@ -1,0 +1,82 @@
+.container {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.svg {
+	display: block;
+}
+.diamond {
+	opacity: 0;
+	transform: translate(0, 0);
+}
+
+.diamondStroke {
+	opacity: 0;
+	transform: translate(0, 0);
+}
+
+.image {
+	opacity: 0;
+}
+
+.container.fly.mounted .diamond,
+.container.fly.mounted .diamondStroke {
+	animation: flyIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.container.fly.mounted .image {
+	animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes flyIn {
+	0% {
+		opacity: 0;
+		transform: translate(var(--fly-x, 100px), var(--fly-y, 100px));
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.container.fly .diamond:nth-child(1),
+.container.fly .diamondStroke:nth-child(1) {
+	--fly-x: 0px;
+	--fly-y: -100px;
+}
+.container.fly .diamond:nth-child(2),
+.container.fly .diamondStroke:nth-child(2) {
+	--fly-x: -100px;
+	--fly-y: -100px;
+}
+.container.fly .diamond:nth-child(3),
+.container.fly .diamondStroke:nth-child(3) {
+	--fly-x: -100px;
+	--fly-y: 100px;
+}
+.container.fly .diamond:nth-child(4),
+.container.fly .diamondStroke:nth-child(4) {
+	--fly-x: 100px;
+	--fly-y: 100px;
+}
+.container.fly .diamond:nth-child(5),
+.container.fly .diamondStroke:nth-child(5) {
+	--fly-x: 100px;
+	--fly-y: -100px;
+}
+.container.fly .diamond:nth-child(6),
+.container.fly .diamondStroke:nth-child(6) {
+	--fly-x: 700px;
+	--fly-y: -700px;
+}
+/* ... и так далее для остальных ромбиков */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

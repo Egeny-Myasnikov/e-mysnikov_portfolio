@@ -1,0 +1,26 @@
+.titleSection {
+	font-family: var(--font-title), serif;
+	letter-spacing: 4px;
+	font-size: var(--font-size-2md);
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: var(--gap-sm);
+	margin-bottom: 64px;
+}
+.primary {
+	color: var(--color-text-2);
+}
+.secondary {
+	color: var(--color-text-1);
+}
+.titleIcon {
+	width: 32px;
+	height: 32px;
+}
+.titleIcon--primary {
+	color: var(--color-bg-1);
+}
+.titleIcon--secondary {
+	color: var(--color-secondary);
+}

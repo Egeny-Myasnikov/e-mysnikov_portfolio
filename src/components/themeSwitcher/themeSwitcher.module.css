@@ -1,0 +1,58 @@
+.themeSwitcher {
+	--width: 60px;
+	--height: 30px;
+	--padding: 3px;
+	display: flex;
+	align-items: center;
+	width: var(--width);
+	height: var(--height);
+	position: relative;
+	background-color: var(--color-bg-1);
+	border-radius: 15px;
+	padding: var(--padding);
+	cursor: pointer;
+	transition: var(--transition-normal);
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+.checkbox {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(var(--height) - var(--padding));
+	height: calc(var(--height) - var(--padding));
+	background-color: var(--color-bg-2);
+	color: var(--color-white);
+	box-shadow: inset 0px 0px 10px var(--color-white);
+	outline: 4px solid var(--color-bg-1);
+	border-radius: 50%;
+	transition: var(--transition-normal);
+}
+.checkbox:checked + .slider {
+	transform: translateX(calc(var(--width) / 2 - var(--padding)));
+	background-color: var(--color-bg-2);
+	color: var(--color-white);
+}
+
+@media (hover: hover) {
+	.themeSwitcher:hover {
+		box-shadow: 0px 0px 10px var(--color-text-1),
+			inset 0px 0px 10px var(--color-text-1);
+	}
+	.themeSwitcher:hover .slider {
+		box-shadow: 0px 0px 10px var(--color-text-1),
+			inset 0px 0px 10px var(--color-white);
+	}
+}
+.themeSwitcher:has(.checkbox:focus-visible) {
+	box-shadow: 0px 0px 10px var(--color-text-1),
+		inset 0px 0px 10px var(--color-white);
+}
+.themeSwitcher:has(.checkbox:focus-visible) .slider {
+	box-shadow: 0px 0px 20px var(--color-text-1);
+}

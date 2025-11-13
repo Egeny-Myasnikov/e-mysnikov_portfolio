@@ -1,0 +1,141 @@
+:root,
+:root[data-theme='light'] {
+	/* Цвета из макета */
+	--color-red: #fb5b46;
+	--color-primary: #eadeff;
+	--color-secondary: #584b8c;
+	--rgb-color-secondary: 88, 75, 140;
+	--color-black: #24222d;
+	--rgb-color-black: 36, 34, 45; /* alpha 0.75*/
+	--color-white: #fafafa;
+	--rgb-color-white: 250, 250, 250; /* alpha 0.75*/
+
+	--color-bg-1: var(--color-primary);
+	--color-text-1: var(--color-black);
+	--rgb-color-text-1: var(--rgb-color-black);
+	--color-bg-2: var(--color-black);
+	--color-text-2: var(--color-white);
+	--color-border: var(--rgb-color-black);
+
+	/* Shadows */
+	--shadow-sm: 0 1px 2px 0 var(--color-shadow);
+	--shadow-md: 0 4px 6px -1px var(--color-main-5),
+		0 2px 4px -2px var(--color-shadow);
+	--shadow-lg: 0 10px 15px -3px var(--color-main-5),
+		0 4px 6px -4px var(--color-shadow);
+}
+
+:root {
+	/* Screens */
+	--narrow-screen: 480px;
+	--medium-screen: 768px;
+	/* Font families */
+	--font-primary: var(--font-inter);
+	--font-numbers: var(--font-leagueSpartan);
+	--font-mono: var(--font-roboto-mono);
+	--font-title: var(--font-rubik);
+
+	/* Font sizes */
+	--font-size-xs: 12px;
+	--font-size-sm: 14px;
+	--font-size-md: 16px;
+	--font-size-2md: 32px;
+	--font-size-lg: 46px;
+	--font-size-xl: 60px;
+	--font-size-2xl: 90px;
+	--font-size-3xl: 130px;
+
+	/* Spacing */
+	--gap-sm: 10px;
+	--gap-md: 30px;
+	--gap-lg: 60px;
+
+	--space-xs: 4px;
+	--space-sm: 8px;
+	--space-md: 16px;
+	--space-lg: 32px;
+	--space-xl: 40px;
+	--space-2xl: 64px;
+
+	/* Border radius */
+	--radius-sm: 6px;
+	--radius-md: 10px;
+	--radius-lg: 30px;
+	--radius-xl: 100px;
+
+	/* Transitions */
+	--transition-fast: 0.15s ease;
+	--transition-normal: 0.2s ease;
+	--transition-slow: 0.5s ease;
+
+	/* Container */
+	--container-max-width: 1920px;
+	--container-padding: 16px 64px;
+
+	/* Z-index */
+	--z-dropdown: 1000;
+	--z-sticky: 1020;
+	--z-fixed: 1030;
+	--z-modal: 1040;
+	--z-popover: 1050;
+	--z-tooltip: 1060;
+}
+
+@media (max-width: 1250px) {
+	:root {
+		--container-padding: 16px 32px;
+	}
+}
+@media (max-width: 768px) {
+	:root {
+		--container-padding: 16px;
+	}
+}
+
+/* Dark theme */
+:root,
+:root[data-theme='dark'] {
+	/* Цвета из макета */
+	--color-red: #fb5b46;
+	--color-primary: #64989d;
+	--color-secondary: #12f7d6;
+	--rgb-color-secondary: 18, 247, 214;
+	--color-black: #24222d;
+	--rgb-color-black: 36, 34, 45; /* alpha 0.75*/
+	--color-white: #fafafa;
+	--rgb-color-white: 250, 250, 250; /* alpha 0.75*/
+
+	--color-bg-1: var(--color-black);
+	--color-text-1: var(--color-white);
+	--rgb-color-text-1: var(--rgb-color-black);
+	--color-bg-2: var(--color-primary);
+	--color-text-2: var(--color-black);
+	--color-border: var(--rgb-color-white);
+}
+
+/* @media (max-width: 768px) {
+	:root,
+	.light-theme {
+
+		--font-size-xs: 12px;
+		--font-size-sm: 14px;
+		--font-size-md: 16px;
+		--font-size-lg: 46px;
+		--font-size-xl: 60px;
+		--font-size-2xl: 90px;
+		--font-size-3xl: 100px;
+	}
+}
+@media (max-width: 480px) {
+	:root,
+	.light-theme {
+
+		--font-size-xs: 12px;
+		--font-size-sm: 14px;
+		--font-size-md: 16px;
+		--font-size-lg: 46px;
+		--font-size-xl: 60px;
+		--font-size-2xl: 90px;
+		--font-size-3xl: 40px;
+	}
+} */

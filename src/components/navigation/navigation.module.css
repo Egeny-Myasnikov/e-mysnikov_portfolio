@@ -1,0 +1,36 @@
+.navigation {
+	display: flex;
+}
+
+.link {
+	position: relative;
+	padding: var(--space-sm);
+	color: var(--color-white);
+
+	&::before {
+		content: '';
+		z-index: 1000;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 30%;
+		height: 2px;
+		background-color: currentColor;
+		transition: width var(--transition-normal);
+	}
+}
+
+@media (hover: hover) {
+	.link:hover {
+		color: rgba(var(--rgb-color-white), 0.75);
+		&::before {
+			width: 100%;
+		}
+	}
+}
+.link:focus-visible {
+	color: rgba(var(--rgb-color-white), 0.75);
+	&::before {
+		width: 100%;
+	}
+}
