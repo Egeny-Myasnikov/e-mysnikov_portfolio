@@ -26,8 +26,8 @@ export default function Projects() {
 								<p className={s.description}>{project.description}</p>
 
 								<div className={s.technologies}>
-									{project.technologies.map(tech => (
-										<span key={tech} className={s.tech}>
+									{project.technologies.map((tech, idx) => (
+										<span key={idx} className={s.tech}>
 											{tech}
 										</span>
 									))}
