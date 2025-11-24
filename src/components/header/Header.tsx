@@ -28,7 +28,8 @@ export default function Header() {
 					</div>
 					<button
 						onClick={showBurger}
-						aria-label='burger'
+						aria-label='Меню'
+						aria-expanded={isOpenBurger}
 						className={`${s.burger}`}
 					></button>
 

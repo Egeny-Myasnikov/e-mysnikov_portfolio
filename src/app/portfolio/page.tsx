@@ -1,9 +1,9 @@
-import { PortfolioSlider } from '../../components/portfolioSlider/PortfolioSlider'
+import { Portfolio } from '../../components/portfolio/Portfolio'
 
 export default function PortfolioPage() {
 	return (
 		<main className='page-transition'>
-			<PortfolioSlider />
+			<Portfolio />
 		</main>
 	)
 }

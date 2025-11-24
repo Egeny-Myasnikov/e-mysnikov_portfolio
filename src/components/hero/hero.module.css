@@ -155,9 +155,7 @@
 	.title {
 		font-size: var(--font-size-xl);
 	}
-	.contentTitle {
-		font-size: var(--font-size-lg);
-	}
+
 	.primaryButton {
 		/* width: 100%; */
 		justify-self: center;

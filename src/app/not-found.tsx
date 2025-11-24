@@ -6,3 +6,6 @@ export default function NotFound() {
 		</div>
 	)
 }
+export const metadata = {
+	title: 'Страница не найдена',
+}

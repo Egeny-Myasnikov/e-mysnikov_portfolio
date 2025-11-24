@@ -3,7 +3,6 @@
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: start;
-	/* height: 84vh; */
 	margin: 0 auto;
 	width: 100%;
 }
@@ -33,8 +32,10 @@
 	padding: var(--space-xl);
 }
 .projectsItemSideImage {
+	width: 500px;
 	position: relative;
 	flex: 1;
+
 	min-height: 500px;
 }
 .projectImg {
@@ -133,7 +134,8 @@
 		padding: var(--space-md);
 	}
 	.projectsItemSideImage {
-		justify-self: flex-start;
+		width: 100%;
+		align-self: center;
 		min-height: 250px;
 	}
 	.projectImg {
@@ -167,4 +169,6 @@
 		font-size: var(--font-size-md);
 		padding: 8px;
 	}
+}
+@media (max-width: 768px) {
 }

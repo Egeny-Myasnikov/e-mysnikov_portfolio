@@ -89,6 +89,17 @@
 @media (max-width: 768px) {
 	:root {
 		--container-padding: 16px;
+		--font-size-xl: 46px;
+	}
+}
+@media (max-width: 596px) {
+	:root {
+		--container-padding: 8px;
+	}
+}
+@media (max-width: 400px) {
+	:root {
+		--container-padding: 4px;
 	}
 }
 
@@ -112,30 +123,3 @@
 	--color-text-2: var(--color-black);
 	--color-border: var(--rgb-color-white);
 }
-
-/* @media (max-width: 768px) {
-	:root,
-	.light-theme {
-
-		--font-size-xs: 12px;
-		--font-size-sm: 14px;
-		--font-size-md: 16px;
-		--font-size-lg: 46px;
-		--font-size-xl: 60px;
-		--font-size-2xl: 90px;
-		--font-size-3xl: 100px;
-	}
-}
-@media (max-width: 480px) {
-	:root,
-	.light-theme {
-
-		--font-size-xs: 12px;
-		--font-size-sm: 14px;
-		--font-size-md: 16px;
-		--font-size-lg: 46px;
-		--font-size-xl: 60px;
-		--font-size-2xl: 90px;
-		--font-size-3xl: 40px;
-	}
-} */

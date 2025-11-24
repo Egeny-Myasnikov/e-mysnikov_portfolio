@@ -1,9 +1,10 @@
 'use client'
-import Image from 'next/image'
 import Link from 'next/link'
-import { projects } from '../../data/portfolio-data'
+// import { projects } from '../../data/portfolio-data'
+import { useProjectsStore } from '../../stores/projectStore'
+import { Slider } from '../slider/Slider'
 import { TitleSection } from '../titleSection/TitleSection'
-import s from './portfolioSlider.module.css'
+import s from './portfolio.module.css'
 
 // interface PortfolioSliderProps {
 
@@ -11,28 +12,22 @@ import s from './portfolioSlider.module.css'
 
 // export const PortfolioSlider: React.FC<PortfolioSliderProps> = () => {
 
-export const PortfolioSlider = () => {
+export const Portfolio = () => {
+	const projects = useProjectsStore(state => state.projects)
 	return (
 		<div className={`${s.portfolioSlider} container`}>
 			<TitleSection className={`${s.title}`} variant='secondary'>
 				Проекты
 			</TitleSection>
+
 			<div className={`${s.projects}`}>
 				<ul className={`${s.projectsList}`}>
 					{projects?.map(
 						(
-							{
-								id,
-								title,
-								description,
-								technologies,
-								images,
-								githubUrl,
-								liveUrl,
-							},
+							{ title, description, technologies, images, githubUrl, liveUrl },
 							idx
 						) => (
-							<li key={id} className={`${s.projectsItem}`}>
+							<li key={idx} className={`${s.projectsItem}`}>
 								<div className={`${s.projectsItemSideDescription}`}>
 									<h3 className={`${s.projectsItemTitle}`}>{title}</h3>
 									<p className={`${s.projectsItemDescription}`}>
@@ -72,14 +67,7 @@ export const PortfolioSlider = () => {
 									<span className={`${s.numProject}`}>{idx + 1}</span>
 								</div>
 								<div className={`${s.projectsItemSideImage}`}>
-									{images && (
-										<Image
-											className={`${s.projectImg}`}
-											alt=''
-											src={images[0]}
-											fill
-										/>
-									)}
+									{images.length !== 0 && <Slider images={images} />}
 								</div>
 							</li>
 						)

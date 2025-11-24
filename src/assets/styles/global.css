@@ -119,15 +119,14 @@ p {
 .page-transition {
 	display: flex;
 	flex-direction: column;
-	padding: 24px;
 	border-radius: var(--radius-md);
 	min-height: 80vh;
 	opacity: 1;
-	animation: afa 1s ease-in-out;
+	animation: anim 1s ease-in-out;
 }
 
 /* animations */
-@keyframes afa {
+@keyframes anim {
 	from {
 		opacity: 0;
 		transform: translateY(-100px);
